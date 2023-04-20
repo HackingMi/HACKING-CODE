@@ -1,0 +1,205 @@
+if __name__ == '__main__':
+
+    # calcular el impuesto
+    mnto = 100.0
+    igv = 0.18
+    totalfac = 0.0
+    imp = 0.0
+    op = ""
+    des = ""
+    alm = ""
+    cn = ""
+
+    while True:
+
+        print("|     RESTAURANTE CHILLCCE S.A  |")
+        print("|              MENU             |")
+        print("|===============================|")
+        print("| A |Desayuno                   |")
+        print("| B |Almuerzo                   |")
+        print("| C |Cena                       |")
+        print("| D |========== SALIR ==========|")
+
+        while True:
+            op: str = input().lower()
+
+            if op not in ("a", "b", "c", "d"):
+                print("Opción inválida, ingrese nuevamente")
+
+            if op == "d":
+
+                print("|      BOLETA DE VENTAS         |")
+                print("|===============================|")
+                print(f"| Subtotal : S/{mnto:.2f}            |")
+                print(f"| Igv      : S/{imp:.2f}             |")
+                print(f"| Total a pagar: S/{totalfac:.2f}        |")
+                print("|                               |")
+                print("|     Gracias por tu compra     |")
+                print("|===============================|")
+
+            else:
+                print("  Elija su Comida\n")
+                break
+
+        if op == "a":
+            print("|            Desayuno           |")
+            print("|===============================|")
+            print("| A |Café                |S/4.50|")
+            print("| B |Chocolate           |S/5.00|")
+            print("| C |Jugo de Fresas      |S/9.00|")
+            print("| D |Jugo de Papaya      |S/8.00|")
+            print("| E |Pan con Pollo       |S/7.00|")
+            print("| F |Pan con Jamón       |S/7.00|")
+            print("| G |Pan con Tortilla    |S/7.00|")
+            print("| J |========== SALIR ==========|")
+
+            while True:
+                des = input().lower()
+
+                if des not in ("a", "b", "c", "d", "e", "f", "g", "j"):
+                    print("Opción inválida, ingrese nuevamente")
+                else:
+                    break
+
+            if des == "a":
+                mnto = 4.50
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif des == "b":
+                mnto = 5.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif des == "c":
+                mnto = 9.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif des == "d":
+                mnto = 8.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif des == "e":
+                mnto = 7.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif des == "f":
+                mnto = 7.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif des == "g":
+                mnto = 7.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+        elif op == "b":
+
+            print("|            Almuerzo           |")
+            print("|===============================|")
+            print("| A |Tallarines         |S/11.00|")
+            print("| B |Chanfainita        |S/15.00|")
+            print("| C |Arroz Chaufa       |S/10.00|")
+            print("| D |Pescado Frito      |S/11.00|")
+            print("| E |Adobo de Pollo     |S/12.00|")
+            print("| F |Lomo Saltado       |S/15.00|")
+            print("| G |Causa Rellena      |S/14.00|")
+            print("| J |========== SALIR ==========|")
+
+            while True:
+                alm = input().lower()
+
+                if alm not in ("a", "b", "c", "d", "e", "f", "j"):
+                    print("Opción inválida, ingrese nuevamente")
+
+                else:
+                    break
+
+            if alm == "a":
+                mnto = 11.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif alm == "b":
+                mnto = 15.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif alm == "c":
+                mnto = 10.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif alm == "d":
+                mnto = 11.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif alm == "e":
+                mnto = 12.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif alm == "f":
+                mnto = 15.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif alm == "g":
+                mnto = 14.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+        elif op == "c":
+
+            print("|              Cena              |")
+            print("|================================|")
+            print("| A |Pizza Exprés        |S/9.50 |")
+            print("| B |Ensalada Campera    |S/7.00 |")
+            print("| C |Gazpacho            |S/8.00 |")
+            print("| D |Caldo de Gallina    |S/12.00|")
+            print("| E |Pollo al Horno      |S/10.00|")
+            print("| F |Menestrón           |S/11.00|")
+            print("| J |========== SALIR ===========|")
+
+            while True:
+                cn = input().lower()
+
+                if cn not in ("a", "b", "c", "d", "e", "f", "j"):
+                    print("Opción inválida, ingrese nuevamente")
+                else:
+                    break
+
+            if cn == "a":
+                mnto = 9.50
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif cn == "b":
+                mnto = 7.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif cn == "c":
+                mnto = 8.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif cn == "d":
+                mnto = 12.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif cn == "e":
+                mnto = 10.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+
+            elif cn == "f":
+                mnto = 11.00
+                imp += mnto * igv
+                totalfac += mnto + imp
+                break
